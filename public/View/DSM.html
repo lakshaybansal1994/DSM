@@ -1,0 +1,34 @@
+<body>
+<div ng-controller="DsmCtrl">
+<table class="table">
+
+
+  <tr>
+          <th style="text-align: center;vertical-align:middle" rowspan="2"><input class="form-control" ng-model="contact.name" ng-disabled="true"></th>
+          <th><input class="form-control" ng-model="contact.yesterday" placeholder="Enter Yesterday's Tasks"></th>
+          <th><input class="form-control" ng-model="contact.impediment" placeholder="Enter Impediments"></th>
+          <th rowspan="2"><button class="btn btn-info" ng-click="update()" ng-disabled="isDisabledEdit">Update</button>&nbsp;&nbsp;<button class="btn btn-info" ng-click="deselect()">Clear</button></th>
+        </tr>
+		<tr>
+		<th><input class="form-control" ng-model="contact.today" placeholder="Enter Today's Tasks"></th>
+		</tr>
+		<tr style="background-color:#00BFFF">
+    <th style="text-align: center;color:white;">Name</th>
+    <th style="text-align: center;color:white;">Actions</th>
+	<th style="text-align: center;color:white;">Impediments</th>
+	<th>&nbsp;</th>
+  </tr>
+  <tbody ng-repeat="contact in contactList">
+  <tr>
+    <td style="text-align: center;vertical-align:middle" rowspan="2">{{contact.name}}</td>
+    <td>Yesterday: {{contact.yesterday}}</td>
+	<td style="text-align: center;" rowspan="2">{{contact.impediment}}</td>
+	<td><button class="btn btn-warning" ng-click="edit(contact._id)">Edit</button></td>
+  </tr>
+  <tr>
+    <td>Today: {{contact.today}}</td>
+  </tr>
+  </tbody>
+</table>
+</div>
+</body>

@@ -1,0 +1,23 @@
+<body>
+<div ng-controller="AddTeamsCtrl">
+<table class="table">
+  <tr>
+          <th style="text-align: center;vertical-align:middle"><input class="form-control" ng-model="contact.teamName" placeholder="Enter Team Name"></th>
+          <th><button class="btn btn-primary" ng-click="addContact()">Add Team</button></th>
+        </tr>
+		<tr style="background-color:#00BFFF">
+    <th style="text-align: center;color:white;">Team Name</th>
+	<th>&nbsp;</th>
+	<th>&nbsp;</th>
+  </tr>
+  <tbody ng-repeat="contact in contactList">
+  <tr>
+    <td style="text-align: center;vertical-align:middle">{{contact.teamName}}</td>
+	<td><button class="btn btn-danger" ng-click="remove(contact._id)">Remove</button></td>
+	<td><a href="#AddMembers" class="btn btn-warning" role="button" ng-click="edit(contact.teamName)">Add Members</a></td>
+  </tr>
+  </tbody>
+</table>
+</div>
+
+</body>

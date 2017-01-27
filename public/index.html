@@ -1,0 +1,42 @@
+<!DOCTYPE>
+<html ng-app="Index">
+<head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular.min.js"></script>
+	<script src="http://ajax.googleapis.com/ajax/libs/angularjs/1.2.26/angular-route.min.js"></script>
+<script src="controller/controller.js"></script>
+
+
+<title>Daily StandUp Meeting</title>
+</head>
+<body >
+<div class="row" style="background-color:#00BFFF;">
+	<div class="col-xs-4"></div>
+	<div class="col-xs-8">
+	<div class="row"><h1 style="color:white;float: middle;">Daily StandUp Meeting</h1></div>
+	<div class="row"><h4 style="color:white; float:right;"></h4></div>
+	</div>
+	</div>
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#Main">DSM</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li><a href='#AllTeam'>Daily StandUp</a></li>
+      <li><a href='#AddTeams'>Add Teams</a></li>
+    </ul>
+  </div>
+</nav>
+
+<div ng-view></div>
+
+		<br>
+<div class="row" style="background-color: #00BFFF;bottom: 0px;position: fixed;height:30px;bottom:0px;left:0px;right:0px;margin-bottom:0px;">
+
+			<div class="col-xs-12">
+				<h5 style="float: right; color: white;">POWERED BY:ARICENT/CISCO TEAM</h5>
+			</div>
+		</div>
+</body>
+<html>
